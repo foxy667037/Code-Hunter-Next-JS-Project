@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+.secondFooter {
+  width: 100%;
+  height: 10vh;
+  background: white;
+  color: rgba(0, 0, 0, 0.796);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Urbanist", serif;
+  font-size: 20px;
+}
+
+.secondFooter span {
+  font-weight: 800;
+  color: transparent;
+  background: linear-gradient(to right, #401fff, #7546f8fa);
+  -webkit-background-clip: text;
+  cursor: pointer;
+}
+
+.secondFooter span:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background: linear-gradient(to right, #401fff, #7546f8fa);
+  position: relative;
+  margin: auto;
+  width: 90%;
+  height: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  animation: fadeInUp 1s ease-out;
+  padding: 40px 10px 20px 10px;
+}
+
+.footerTop h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: "Poppins", serif;
+}
+
+.footerTop p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Red Hat Display", serif;
+}
+
+.footerButtons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Urbanist", serif;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.02);
+  gap: 8px;
+}
+
+.chatBtn {
+  background-color: black;
+  color: white;
+}
+
+.getStartedBtn {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 80px;
+  margin-bottom: 20px;
+}
+
+.column {
+  margin: 15px;
+}
+
+.column h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: "Poppins", serif;
+}
+
+.column a {
+  display: block;
+  font-family: "Poppins", serif;
+  color: #cbd5e1;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.column a:hover {
+  color: #ffffff;
+}
+
+.bottomBorder {
+  width: 88%;
+  margin: auto;
+  border-bottom: 1px solid #eaeaea6b;
+}
+
+.footerBottom {
+  font-size: 14px;
+  color: white;
+  font-family: "Poppins", serif;
+  margin-top: 10px;
+}
+.footerBottom p{
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1080px) {
+  .footerLinks{
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 786px) {
+  .footerTop h2{
+    font-size: 22px;
+  }
+  .footerTop p{
+    font-size: 14px;
+  }
+  .footerLinks{
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 496px) {
+  .footerButtons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn{
+    width: 100%;
+  }
+}

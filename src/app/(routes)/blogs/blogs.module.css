@@ -1,0 +1,41 @@
+/* all blog */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin-bottom: 30px;
+  width: 100%;
+  animation: fadeInUp 1s ease-out;
+}
+
+.allBlogSection {
+  margin: auto;
+  width: 90%;
+  height: auto;
+  padding: 10px auto 30px auto;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.allBlogHeading {
+  text-align: left;
+  font-size: 28px;
+  font-family: "Poppins", serif;
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

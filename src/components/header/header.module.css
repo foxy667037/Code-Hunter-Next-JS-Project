@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* General Navbar Styling */
+.navbar {
+  font-family: Arial, sans-serif;
+}
+
+/* Top Bar Styling */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+/* Social Icon Styling */
+.socialIcons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.socialIcons a:hover {
+  color: #007bff;
+  transform: rotate(45deg);
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: 600;
+  color: transparent;
+  background: linear-gradient(to right, #401fff, #7546f8fa);
+  -webkit-background-clip: text;
+  font-family: "Poppins", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Login Button */
+.loginContainer {
+  display: flex;
+}
+
+.loginButton {
+  display: flex;
+  color: #ffffff;
+  background: linear-gradient(to right, #401fff, #7546f8fa);
+  padding: 10px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-family: "Urbanist", serif;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  font-size: 14px;
+}
+
+.loginButton > .arrow {
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  position: relative;
+  transform: rotate(-45deg);
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+
+.loginButton > .arrow::before {
+  display: block;
+  background-color: currentColor;
+  width: 3px;
+  transform-origin: bottom right;
+  height: 2px;
+  position: absolute;
+  opacity: 0;
+  bottom: calc(-2px / 2);
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+  content: "";
+  right: 0;
+}
+
+.loginButton:hover > .arrow {
+  transform: rotate(-45deg) translate(4px, 4px);
+}
+
+.loginButton:hover > .arrow::before {
+  opacity: 1;
+  width: 8px;
+}
+
+.loginButton:hover {
+  background: linear-gradient(to right, #411fff73, #7546f86c);
+  color: #fff;
+}
+
+.bottomBorder {
+  width: 95%;
+  margin: auto;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Navigation Menu */
+.menu {
+  background-color: white;
+  padding: 15px 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+/* Styling the list items */
+.menu ul li {
+  display: inline;
+  position: relative;
+}
+
+/* Styling the anchor links */
+.menu ul li a {
+  text-decoration: none;
+  font-family: "Red Hat Display", serif;
+  color: #333;
+  font-weight: 600;
+  padding: 10px 10px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Active Link Styling */
+.menu ul li a.activeLink {
+  background: linear-gradient(to right, #401fff, #7546f8fa);
+  color: transparent;
+  -webkit-background-clip: text;
+  font-weight: bold;
+}
+
+/* Styling the moving border inside ul */
+.menu ul {
+  position: relative;
+}
+
+.menu .border {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(to right, #401fff, #7546f8fa);
+  width: 65px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect to move and resize the border */
+.menu ul li a:hover {
+  background: linear-gradient(to right, #401fff, #7546f8fa);
+  color: transparent;
+  -webkit-background-clip: text;
+  font-weight: bold;
+}
+
+/* hamburger design */
+.hamburgerContainer {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  color: white;
+  background: linear-gradient(to right, #401fff, #7546f8fa);
+  transition: all 0.3s ease;
+}
+
+.line1 {
+  transform: rotate(45deg) translate(6px, 7px);
+}
+
+.line2 {
+  opacity: 0;
+}
+
+.line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* side bar */
+.sideMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  color: white;
+  background: linear-gradient(to right, #401fff, #7546f8fa);
+  transform: translateX(-100%);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  z-index: 9;
+  box-shadow: 2px 0 10px rgba(146, 30, 255, 0.257);
+}
+
+.sideMenu h2{
+  font-family: "Poppins", serif;
+  font-weight: 600;
+}
+
+.closeButton {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.divider {
+  margin: -10px 0px 20px 0px;
+  border: none;
+  border-top: 1px solid #ffffff3f;
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  font-family: "Red Hat Display", serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 786px) {
+  .socialIcons {
+    display: none;
+  }
+  .loginButton {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  .hamburgerContainer {
+    display: block;
+  }
+  .logo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 496px) {
+  .sideMenu{
+    width: 200px;
+  }
+}
